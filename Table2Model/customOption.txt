@@ -1,1 +1,0 @@
-{"Server":"127.0.0.1","Port":"3306","Database":"qar_db","UId":"qar_dba","Password":"123456","Charset":"utf8mb4","NameSpace":"MODEL","DirectoryPath":"/Users/kushtar/Desktop/Github/Web/QARSolutionsSite/MODEL"}
