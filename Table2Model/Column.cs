@@ -9,7 +9,7 @@ public class Column
     public override string ToString()
     {
         bool isUnsigned = COLUMN_TYPE.Contains("unsigned", StringComparison.OrdinalIgnoreCase);
-        return $"public {MapMySqlType2CSType(DATA_TYPE, isUnsigned)} {TableHelper.FirstChar2Upper(COLUMN_NAME)} {{ get; set; }}";
+        return $"public {MapMySqlType2CSType(DATA_TYPE, isUnsigned)} {TableHelper.CupFirst(COLUMN_NAME)} {{ get; set; }}";
     }
 
     public static string MapMySqlType2CSType(string mysqlType, bool isUnsigned = false)

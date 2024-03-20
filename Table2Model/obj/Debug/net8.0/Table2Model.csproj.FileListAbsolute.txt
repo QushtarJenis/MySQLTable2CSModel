@@ -41,3 +41,4 @@
 /Users/kushtar/Desktop/Github/CSharp/MySQLTable2CSModel/Table2Model/obj/Debug/net8.0/Table2Model.pdb
 /Users/kushtar/Desktop/Github/CSharp/MySQLTable2CSModel/Table2Model/obj/Debug/net8.0/Table2Model.genruntimeconfig.cache
 /Users/kushtar/Desktop/Github/CSharp/MySQLTable2CSModel/Table2Model/obj/Debug/net8.0/ref/Table2Model.dll
+/Users/kushtar/Desktop/Github/CSharp/MySQLTable2CSModel/Table2Model/obj/Debug/net8.0/Table2Model.sourcelink.json

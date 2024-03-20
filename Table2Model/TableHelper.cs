@@ -17,7 +17,7 @@ public class TableHelper
                 foreach (DataRow row in tableList.Rows)
                 {
                     string tableName = row["TABLE_NAME"].ToString();
-                    WriteTable(tableName, _connection, option);
+                    WriteTable(_connection, tableName, option);
                 }
             }
             Console.WriteLine("Successfully written on files!" + Environment.NewLine);
@@ -28,7 +28,7 @@ public class TableHelper
         }
     }
 
-    private static void WriteTable(string tableName, MySqlConnection _connection, Option option)
+    private static void WriteTable(MySqlConnection _connection, string tableName, Option option)
     {
         if (!Directory.Exists(option.DirectoryPath)) Directory.CreateDirectory(option.DirectoryPath);
         string querySql = $"SELECT COLUMN_NAME, DATA_TYPE, COLUMN_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = @tableName AND TABLE_SCHEMA = @database";
@@ -43,7 +43,7 @@ public class TableHelper
         string content = string.Empty;
         if (!string.IsNullOrWhiteSpace(option.NameSpace) && !option.NameSpace.Equals(";"))
             content += $"namespace {option.NameSpace};{newLine}{newLine}";
-            
+
         content += $"public partial class {className}{newLine}";
         content += "{" + newLine;
 
@@ -58,13 +58,23 @@ public class TableHelper
 
     public static string FormatTableName(string tableName)
     {
-        return FirstChar2Upper(tableName.ToLower());
+        return CupFirst(tableName.ToLower());
     }
 
-    public static string FirstChar2Upper(string str)
+    public static string CupFirst(string input)
     {
-        string firstLetter = str[0].ToString().ToUpper();
-        return firstLetter + str[1..];
+        if (string.IsNullOrWhiteSpace(input))
+            return input;
+        return char.ToUpper(input[0]) + input[1..];
+    }
+
+    public static string LowFirst(string input)
+    {
+        if (string.IsNullOrWhiteSpace(input))
+        {
+            return input;
+        }
+        return char.ToLower(input[0]) + input[1..];
     }
 
 }
