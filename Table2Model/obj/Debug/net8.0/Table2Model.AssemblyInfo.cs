@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Table2Model")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2851e25c63b68fff7efaac651ffeea64000e1a91")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f4f6acf8e03e0d9914aaa5ad9f73fbe4df99fc5f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Table2Model")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Table2Model")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
