@@ -1,2 +1,6 @@
-
+/Table2Model/bin
+/Table2Model/logs
+/Table2Model/obj
+Table2Model/.DS_Store
+.DS_Store
 Table2Model/customOption.txt
