@@ -25,6 +25,10 @@ public class TableHelper
 
                     if (!string.IsNullOrWhiteSpace(tableName) && !string.IsNullOrWhiteSpace(content))
                     {
+                        if (File.Exists(filePath))
+                        {
+                            File.Delete(filePath);
+                        }
                         contentDic[filePath] = content;
                     }
                 }
