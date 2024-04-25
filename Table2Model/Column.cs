@@ -16,7 +16,7 @@ public class Column
     {
         return mysqlType.Trim().ToLower() switch
         {
-            "bigint" => isUnsigned ? "ulong" : "long",
+            // "bigint" => isUnsigned ? "ulong" : "long",
             "binary" => "byte[]",
             "bit" => "bool", // or byte/byte[] for larger bit fields
             "blob" => "byte[]",
@@ -29,8 +29,11 @@ public class Column
             "float" => "float",
             "geometry" => "byte[]",
             // "geometrycollection" => "string",
-            "int" => isUnsigned ? "uint" : "int",
-            "integer" => isUnsigned ? "uint" : "int",
+            // "int" => isUnsigned ? "uint" : "int",
+            // "integer" => isUnsigned ? "uint" : "int",
+            "int" => "int",
+            "integer" => "int",
+            "bigint" => "int",
             "json" => "string",
             // "linestring" => "___",
             "longblob" => "byte[]",
